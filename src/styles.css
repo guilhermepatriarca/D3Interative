@@ -1,0 +1,83 @@
+body {
+  /*background-color: #37474f;*/
+}
+svg {
+  background-color: #37474f;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+svg:not(.active):not(.ctrl) {
+  cursor: crosshair;
+}
+
+path.link {
+  fill: none;
+  stroke: rgba(239, 242, 247, 1);
+  stroke-width: 2px;
+  cursor: default;
+}
+
+svg:not(.active):not(.ctrl) path.link {
+  cursor: pointer;
+}
+
+path.link.selected {
+  stroke-dasharray: 10, 2;
+}
+
+path.link.dragline {
+  pointer-events: none;
+}
+
+path.link.hidden {
+  stroke-width: 0;
+}
+
+circle.node {
+  stroke-width: 1.5px;
+  cursor: pointer;
+}
+
+circle.node.reflexive {
+  stroke: #000 !important;
+  stroke-width: 1.5px;
+}
+
+circle.hidden {
+  stroke-width: 0;
+  fill: transparent;
+}
+.option_menu .hidden {
+  stroke: 0;
+}
+text.title {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  fill: #006bb7;
+  font-weight: bold;
+}
+text.name {
+  font-family: sans-serif;
+  fill: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+text.sub_name {
+  font-family: sans-serif;
+  fill: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+}
+text.version {
+  font-family: sans-serif;
+  fill: #eff2f7;
+  font-size: 10px;
+}
+
+.visibility {
+  visibility: hidden;
+}
